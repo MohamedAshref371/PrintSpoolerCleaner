@@ -47,6 +47,7 @@ namespace PrintSpoolerCleaner
                 sc.Start();
                 sc.WaitForStatus(ServiceControllerStatus.Running, TimeSpan.FromSeconds(10));
 
+                Console.WriteLine("https://github.com/MohamedAshref371/PrintSpoolerCleaner");
                 Console.WriteLine("Done.");
             }
             catch (Exception ex)
