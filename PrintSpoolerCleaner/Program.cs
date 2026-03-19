@@ -9,6 +9,7 @@ namespace PrintSpoolerCleaner
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("PrintSpoolerCleaner v1.0");
             string spoolPath = @"C:\Windows\System32\spool\PRINTERS";
 
             try

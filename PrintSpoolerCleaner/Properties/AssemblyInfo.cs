@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PrintSpoolerCleaner")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("PrintSpoolerCleaner v1.0")]
+[assembly: AssemblyDescription("Stops, clears, and restarts the Print Spooler.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("github.com/MohamedAshref371")]
 [assembly: AssemblyProduct("PrintSpoolerCleaner")]
 [assembly: AssemblyCopyright("Copyright ©  2026")]
 [assembly: AssemblyTrademark("")]
