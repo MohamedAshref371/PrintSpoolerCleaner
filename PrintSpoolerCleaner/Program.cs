@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.ServiceProcess;
-using System.Threading;
 
 namespace PrintSpoolerCleaner
 {
@@ -10,8 +9,8 @@ namespace PrintSpoolerCleaner
         static void Main(string[] args)
         {
             Console.WriteLine("PrintSpoolerCleaner v1.0");
-            string spoolPath = @"C:\Windows\System32\spool\PRINTERS";
-
+            string spoolPath = Path.Combine(Environment.SystemDirectory, "spool", "PRINTERS");
+            
             try
             {
                 ServiceController sc = new ServiceController("Spooler");
