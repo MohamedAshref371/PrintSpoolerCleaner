@@ -1,1 +1,2 @@
-# PrintSpoolerCleaner
+# PrintSpoolerCleaner v1.0
+
