@@ -8,7 +8,7 @@ namespace PrintSpoolerCleaner
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"PrintSpoolerCleaner v1.1\n");
+            Console.WriteLine($"PrintSpoolerCleaner v1.2\n");
             string spoolPath = Path.Combine(Environment.SystemDirectory, "spool", "PRINTERS");
 
             try
@@ -41,18 +41,21 @@ namespace PrintSpoolerCleaner
                     }
                     else
                     {
+                        int deletedCount = 0;
                         foreach (FileInfo file in files)
                         {
                             try
                             {
                                 file.Delete();
-                                Console.WriteLine($"Deleted: {file.Name}");
+                                deletedCount++;
+                                //Console.WriteLine($"Deleted: {file.Name}");
                             }
                             catch (Exception ex)
                             {
                                 Console.WriteLine($"Error deleting file {file.Name}: {ex.Message}");
                             }
                         }
+                        Console.WriteLine($"Deleted {deletedCount} file(s).");
                     }
                 }
                 else

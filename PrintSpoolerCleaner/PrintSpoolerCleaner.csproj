@@ -38,6 +38,9 @@
   <PropertyGroup>
     <ApplicationIcon>4275204.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PrintSpoolerCleaner.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
