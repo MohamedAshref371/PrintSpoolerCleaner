@@ -8,7 +8,10 @@ namespace PrintSpoolerCleaner
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine($"PrintSpoolerCleaner v1.2\n");
+            Console.ForegroundColor = ConsoleColor.White;
+
             string spoolPath = Path.Combine(Environment.SystemDirectory, "spool", "PRINTERS");
 
             try
@@ -37,7 +40,9 @@ namespace PrintSpoolerCleaner
 
                     if (files.Length == 0)
                     {
+                        Console.ForegroundColor = ConsoleColor.Gray;
                         Console.WriteLine("No files found in spool folder.");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     else
                     {
@@ -52,10 +57,14 @@ namespace PrintSpoolerCleaner
                             }
                             catch (Exception ex)
                             {
+                                Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine($"Error deleting file {file.Name}: {ex.Message}");
+                                Console.ForegroundColor = ConsoleColor.White;
                             }
                         }
+                        Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine($"Deleted {deletedCount} file(s).");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                 }
                 else
@@ -69,12 +78,17 @@ namespace PrintSpoolerCleaner
                 sc.WaitForStatus(ServiceControllerStatus.Running, TimeSpan.FromSeconds(10));
                 Console.WriteLine("Print Spooler started.");
 
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("\nhttps://github.com/MohamedAshref371/PrintSpoolerCleaner");
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Done.");
+                Console.ForegroundColor = ConsoleColor.White;
             }
             catch (Exception ex)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Error: " + ex.Message);
+                Console.ForegroundColor = ConsoleColor.White;
             }
 
             Console.WriteLine("\nPress Enter to exit...");
