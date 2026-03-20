@@ -1,4 +1,4 @@
-# 🖨️↻ PrintSpoolerCleaner v1.1
+# 🖨️↻ PrintSpoolerCleaner v1.2
 
 **PrintSpoolerCleaner** is a lightweight C# tool for quickly fixing printing issues.  
 It stops the Print Spooler service, clears stuck print jobs, and restarts the service automatically.
